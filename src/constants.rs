@@ -1,0 +1,1 @@
+pub static SUPPORTED_IMAGE_FORMATS: Vec<String> = vec!["SVG"];
