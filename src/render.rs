@@ -1,3 +1,5 @@
+use PRVW::constants;
+
 use std::fmt::{Display, Formatter, Result};
 
 struct Config {
@@ -47,5 +49,18 @@ pub fn render(argv: Vec<String>) {
         }
     }
 
-    println!("{}", conf);
+    // cringe code ikik
+    let mut is_format_supported = false;
+    for format in constants::SUPPORTED_IMAGE_FORMATS {
+        if conf.format == format {
+            is_format_supported = true;
+            break;
+        }
+    }
+
+    if !is_format_supported {
+        panic!("format not supported, srry");
+    }
+
+    // continue
 }

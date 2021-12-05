@@ -1,1 +1,1 @@
-pub static SUPPORTED_IMAGE_FORMATS: Vec<String> = vec!["SVG"];
+pub static SUPPORTED_IMAGE_FORMATS: [&str; 1] = ["SVG"];
